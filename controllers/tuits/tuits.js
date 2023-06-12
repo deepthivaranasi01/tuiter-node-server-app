@@ -11,7 +11,8 @@ export default [
         "retuits": 432,
         "likes": 2345,
         "handle": "@spacex",
-        "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars"
+        "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars",
+        "dislikes" : 0
     },
     {
         "_id": 2,
@@ -25,7 +26,8 @@ export default [
         "retuits": 543,
         "likes": 3456,
         "handle": "@tesla",
-        "tuit": "Autopilot is an advanced driver assistance system that enhances safety and convenience behind the wheel. When used properly, Autopilot reduces your overall workload as a driver. Each new Tesla vehicle is equipped with eight external cameras and powerful vision processing to provide an additional layer of safety. Model 3 and Model Y built for the European and Middle Eastern markets will now utilise our camera-based Tesla Vision, which are not equipped with radar and instead rely on Tesla’s advanced suite of cameras and neural net processing to deliver Autopilot and related features"
+        "tuit": "Autopilot is an advanced driver assistance system that enhances safety and convenience behind the wheel. When used properly, Autopilot reduces your overall workload as a driver. Each new Tesla vehicle is equipped with eight external cameras and powerful vision processing to provide an additional layer of safety. Model 3 and Model Y built for the European and Middle Eastern markets will now utilise our camera-based Tesla Vision, which are not equipped with radar and instead rely on Tesla’s advanced suite of cameras and neural net processing to deliver Autopilot and related features",
+        "dislikes" : 0
     },
     {
       "_id": 3,
@@ -39,7 +41,8 @@ export default [
       "retuits": 432,
       "likes": 2345,
       "handle": "@nasa",
-      "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars"
+      "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars",
+      "dislikes" : 0
   }
   
   

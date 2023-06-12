@@ -7,17 +7,16 @@ import tuitsController from './controllers/tuits/tuits-controller.js'
 import AuthController from "./users/auth-controller.js";
 const app = express()
 app.use(
- session({
-   secret: "any string",
-   resave: false,
-   saveUninitialized: true,
- }),
- cors({
-   credentials: true,
-   origin: "http://localhost:3000",
- })
+  cors({
+    credentials: true,
+    origin: (origin, callback) => {
+      // Allow all origins
+      callback(null, true);
+    },
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Allow all CRUD operations
+  })
 );
-app.use(cors())
+
 app.use(express.json())
 HelloController(app)
 tuitsController(app)

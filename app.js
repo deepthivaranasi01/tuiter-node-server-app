@@ -23,6 +23,14 @@ HelloController(app)
 tuitsController(app)
 UserController(app)
 AuthController(app);
+app.use(
+  session({
+    secret: 'your-secret-key',
+    resave: false,
+    saveUninitialized: false,
+    store: new session.MemoryStore(),
+  })
+);
 const port = process.env.PORT || 4000;
 app.listen(port)
        

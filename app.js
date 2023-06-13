@@ -7,29 +7,28 @@ import tuitsController from './controllers/tuits/tuits-controller.js'
 import AuthController from "./users/auth-controller.js";
 const app = express()
 app.use(
-  cors({
-    credentials: true,
-    origin: (origin, callback) => {
-      // Allow all origins
-      callback(null, true);
-    },
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Allow all CRUD operations
-  })
+ session({
+   secret: "any string",
+   resave: false,
+   saveUninitialized: true,
+ })
 );
+
+app.use(
+ cors({
+   credentials: true,
+   origin: "http://localhost:3000",
+ })
+);
+
+app.use(cors())
 
 app.use(express.json())
 HelloController(app)
 tuitsController(app)
 UserController(app)
 AuthController(app);
-app.use(
-  session({
-    secret: 'your-secret-key',
-    resave: false,
-    saveUninitialized: false,
-    store: new session.MemoryStore(),
-  })
-);
 const port = process.env.PORT || 4000;
+console.log(port)
 app.listen(port)
        

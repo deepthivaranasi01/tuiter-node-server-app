@@ -8,25 +8,6 @@ import * as usersDao from "./users-dao.js";
 let users = people;
 
 
-
-
-const UserController = (app) => {
-
-  app.get('/api/users', findUsers);
-
-  app.get('/api/users/:uid', findUserById);
-
-  app.post('/api/users', createUser);
-
-  app.delete('/api/users/:uid', deleteUser);
-
-  app.put('/api/users/:uid', updateUser);
-
-};
-
-
-
-
 const updateUser = (req, res) => {
 
   const userId = req.params.uid;
@@ -94,6 +75,20 @@ const findUsers = (req, res) => {
   const allUsers = usersDao.findAllUsers();
 
   res.json(allUsers);
+
+};
+
+const UserController = (app) => {
+
+  app.get('/api/users', findUsers);
+
+  app.get('/api/users/:uid', findUserById);
+
+  app.post('/api/users', createUser);
+
+  app.delete('/api/users/:uid', deleteUser);
+
+  app.put('/api/users/:uid', updateUser);
 
 };
 

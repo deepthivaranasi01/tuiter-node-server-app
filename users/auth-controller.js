@@ -29,6 +29,7 @@ res.sendStatus(404);
 
  const profile = async (req, res) => {
  const currentUser = currentUserVar
+ console.log("auth-controllerprofile" + currentUser)
  if (!currentUser) {
  res.sendStatus(404);
  return;

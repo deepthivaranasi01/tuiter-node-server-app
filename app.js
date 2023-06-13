@@ -14,14 +14,20 @@ app.use(
  })
 );
 
+app.use(express.json());
+
 app.use(
  cors({
+  
    credentials: true,
    origin: "http://localhost:3000",
+   optionSuccessStatus:200
  })
 );
 
-app.use(cors())
+
+
+//app.use(cors())
 
 app.use(express.json())
 HelloController(app)
@@ -32,3 +38,4 @@ const port = process.env.PORT || 4000;
 console.log(port)
 app.listen(port)
        
+

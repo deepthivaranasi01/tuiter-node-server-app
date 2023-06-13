@@ -48,7 +48,7 @@ const createUser = (req, res) => {
 
   users.push(newUser);
 
-  console.log(users);
+  console.log("loginsuerss"+users);
 
   res.json(newUser);
 

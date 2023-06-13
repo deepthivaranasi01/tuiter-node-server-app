@@ -21,6 +21,7 @@ const password = req.body.password;
 const user = await usersDao.findUserByCredentials(username, password);
 if (user) {
 currentUserVar = user;
+console.log("curruserhiossbjb"+currentUserVar)
 res.json(user);
  } else {
 res.sendStatus(404);
@@ -29,6 +30,7 @@ res.sendStatus(404);
 
  const profile = async (req, res) => {
  const currentUser = currentUserVar
+ console.log("curruser"+currentUser)
  console.log("auth-controllerprofile" + currentUser)
  if (!currentUser) {
  res.sendStatus(404);

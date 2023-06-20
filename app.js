@@ -23,7 +23,7 @@ session({
 
 
 app.use((req, res, next) => {
-  const allowedOrigins = ["http://localhost:3000","https://a5--harmonious-meerkat-0e4eae.netlify.app"];
+  const allowedOrigins = ["http://localhost:3000","https://a5--harmonious-meerkat-0e4eae.netlify.app","https://a6--harmonious-meerkat-0e4eae.netlify.app"];
   const origin = req.headers.origin;
 
   if (allowedOrigins.includes(origin)) {

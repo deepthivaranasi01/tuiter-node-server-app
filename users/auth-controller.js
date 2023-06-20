@@ -12,12 +12,14 @@ return;
  }
  const newUser = await usersDao.createUser(req.body);
 currentUserVar = newUser;
+console.log("newUser"+newUser.data);
  res.json(newUser);
 };
 
 const login = async (req, res) => {
  const username = req.body.username;
 const password = req.body.password;
+if (username && password) {
 const user = await usersDao.findUserByCredentials(username, password);
 if (user) {
 currentUserVar = user;
@@ -25,6 +27,10 @@ console.log("curruserhiossbjb"+currentUserVar)
 res.json(user);
  } else {
 res.sendStatus(404);
+}
+}
+else {
+  res.sendstatus(403);
 }
 };
 
@@ -55,6 +61,8 @@ res.json(currentUser);
       currentUser.lastName = req.body.lastName;
       const updatedUser = await usersDao.updateUser(currentUser);
       currentUserVar = updatedUser;
+      console.log("currentUserVar"+currentUserVar);
+      console.log("updateduser"+updatedUser);
   
       res.json(updatedUser);
     } catch (error) {

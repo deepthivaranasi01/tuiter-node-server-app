@@ -1,7 +1,8 @@
 import express from 'express'
 import cors from 'cors'
 import session from "express-session";
-
+import mongoose from "mongoose";
+mongoose.connect("mongodb+srv://varanasideepthi:deeps@cluster.wr2nsyk.mongodb.net/"||"mongodb://127.0.0.1:27017/tuiter");
 
 import HelloController from "./controllers/hello-controller.js"
 import UserController from "./users/users-controller.js"
